@@ -1,0 +1,96 @@
+app:
+  title: Rechner
+
+drawer:
+  like: Like
+  get_premium: Premium Version
+  more_apps: Mehr Apps
+  contact: Kontakt
+  terms: Nutzungsbedingungen
+  privacy: Datenschutzerklärung
+  about: Über
+  settings: Einstellungen
+  settings_subtitle: ""
+  light_theme: Helles Thema
+  display_font_size: Display Schriftgröße
+  keyboard_font_size: Tastatur Schriftgröße
+  fullscreen: Vollbild
+  scientific_mode: Wissenschaftlicher Modus
+  history: Verlauf
+
+  url:
+    terms: "https://seniorlaguna.github.io/calculator/terms_de.html"
+    privacy: "https://seniorlaguna.github.io/calculator/privacy_de.html"
+    contact: "https://seniorlaguna.github.io/contact.html"
+
+history:
+  empty: Der Verlauf ist noch leer
+  clear: Verlauf löschen
+
+tutorial:
+  ok: Los gehts!
+  skip: Überspringen
+  step1:
+    title: Einführung
+    message: Wir zeigen dir alles was du brauchst um die App zu benutzen. Wir fangen mit den Einstellungen an.
+  step2:
+    title: Wissenschaftlicher Modus
+    message: Wenn du auf der Tastatur von oben links nach unten rechts swipst, wird die Tastatur erweitert.
+  step3:
+    title: Tastatur wechseln
+    message: Wenn du dann von links nach rechts swipst, wechselst du zwischen den Tastaturen.
+  step4:
+    title: Verlauf
+    message: Den Verlauf findest du, wenn du das Display nach unten ziehst.
+  step5:
+    title: Das wars schon
+    message: Für mehr Infos oder Feedback kannst du uns direkt in der App erreichen. Vielen Dank, dass du dich für unsere App entschieden hast.
+
+num_0: "0"
+num_1: "1"
+num_2: "2"
+num_3: "3"
+num_4: "4"
+num_5: "5"
+num_6: "6"
+num_7: "7"
+num_8: "8"
+num_9: "9"
+constPi:  "π"
+constE: "e"
+dot: ","
+opAdd: "+"
+opSubtract: "-"
+opDivide: "÷"
+opMultiply: "×"
+opPercentage: "%"
+opPower: "^"
+bracketOpen: "("
+bracketClose: ")"
+bracketAuto: "( )"
+sin: "sin"
+cos: "cos"
+tan: "tan"
+cot: "cot"
+sinh: "sinh"
+cosh: "cosh"
+tanh: "tanh"
+coth: "coth"
+asin: "sin⁻¹"
+acos: "cos⁻¹"
+atan: "tan⁻¹"
+acot: "cot⁻¹"
+asinh: "sinh⁻¹"
+acosh: "cosh⁻¹"
+atanh: "tanh⁻¹"
+acoth: "coth⁻¹"
+ln: "ln"
+log: "log"
+factorial: "x!"
+squareRoot: "√"
+abs: "|x|"
+squared: "x²"
+ePowX: "eˣ"
+tenPowX: "10ˣ" 
+clear: "C"
+equals: "="

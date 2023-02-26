@@ -1,0 +1,96 @@
+app:
+  title: Calculator
+
+drawer:
+  like: Like
+  get_premium: Get Premium Version
+  more_apps: Get More Apps
+  contact: Contact Us
+  terms: Terms Of Use
+  privacy: Privacy Policy
+  about: About
+  settings: Settings
+  settings_subtitle: Make it yours
+  light_theme: Light Theme
+  display_font_size: Display Font Size
+  keyboard_font_size: Keyboard Font Size
+  fullscreen: Fullscreen
+  scientific_mode: Scientific Mode
+  history: History
+
+  url:
+    terms: "https://seniorlaguna.github.io/calculator/terms_en.html"
+    privacy: "https://seniorlaguna.github.io/calculator/privacy_en.html"
+    contact: "https://seniorlaguna.github.io/contact.html"
+
+history:
+  empty: We have no history yet
+  clear: Clear History
+
+tutorial:
+  ok: Show me!
+  skip: Skip
+  step1:
+    title: Quick Introduction
+    message: We show you everthing you need to use the app. We start with app customizations in settings.
+  step2:
+    title: Scientific Mode
+    message: Swiping from the top left to the bottom right extends the keyboard.
+  step3:
+    title: Switch Keyboards
+    message: Swiping from left to right switches the keyboards.
+  step4:
+    title: History
+    message: To view your calculation history swipe down on the display.
+  step5:
+    title: That's it
+    message: If you want more information or have any feedback you can contact us right in the app. Thank you very much for using our app.
+
+num_0: "0"
+num_1: "1"
+num_2: "2"
+num_3: "3"
+num_4: "4"
+num_5: "5"
+num_6: "6"
+num_7: "7"
+num_8: "8"
+num_9: "9"
+constPi:  "π"
+constE: "e"
+dot: "."
+opAdd: "+"
+opSubtract: "-"
+opDivide: "÷"
+opMultiply: "×"
+opPercentage: "%"
+opPower: "^"
+bracketOpen: "("
+bracketClose: ")"
+bracketAuto: "( )"
+sin: "sin"
+cos: "cos"
+tan: "tan"
+cot: "cot"
+sinh: "sinh"
+cosh: "cosh"
+tanh: "tanh"
+coth: "coth"
+asin: "sin⁻¹"
+acos: "cos⁻¹"
+atan: "tan⁻¹"
+acot: "cot⁻¹"
+asinh: "sinh⁻¹"
+acosh: "cosh⁻¹"
+atanh: "tanh⁻¹"
+acoth: "coth⁻¹"
+ln: "ln"
+log: "log"
+factorial: "x!"
+squareRoot: "√"
+abs: "|x|"
+squared: "x²"
+ePowX: "eˣ"
+tenPowX: "10ˣ" 
+clear: "C"
+equals: "="

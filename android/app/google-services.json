@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "361059527167",
+    "project_id": "gesture-calculator-c10dd",
+    "storage_bucket": "gesture-calculator-c10dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:361059527167:android:49e1365398ba2c31721fca",
+        "android_client_info": {
+          "package_name": "org.seniorlaguna.gcalculator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "361059527167-m170urm0ftosej3t78fedsjtqi2ep5bi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANbjAVi8YXT7CC7B7wc8Tmj2hCZt_XG60"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "361059527167-m170urm0ftosej3t78fedsjtqi2ep5bi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
