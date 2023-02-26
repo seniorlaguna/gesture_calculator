@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_i18n/flutter_i18n.dart';
 import 'package:fullscreen/fullscreen.dart';
-import 'package:gesture_calculator/bloc/tutorial_cubit.dart';
 import 'package:in_app_review/in_app_review.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../bloc/settings_cubit.dart';
 import '../index.dart';
@@ -18,6 +15,8 @@ class PromoDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    CalculatorTheme theme = Theme.of(context).extension<CalculatorTheme>()!;
+
     return Drawer(
       child: Column(
         children: [
@@ -32,16 +31,11 @@ class PromoDrawer extends StatelessWidget {
           ),
           Text(
             "Senior Laguna",
-            style: TextStyle(
-                fontSize: 24,
-                color:
-                    Theme.of(context).extension<CalculatorTheme>()!.drawerText),
+            style: TextStyle(fontSize: 24, color: theme.drawerText),
           ),
           Text(
             "Apps made with 💜",
-            style: TextStyle(
-                color:
-                    Theme.of(context).extension<CalculatorTheme>()!.resultText),
+            style: TextStyle(color: theme.resultText),
           ),
           const Padding(
             padding: EdgeInsets.symmetric(vertical: 12.0),
@@ -52,8 +46,7 @@ class PromoDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
-            textColor:
-                Theme.of(context).extension<CalculatorTheme>()!.drawerText,
+            textColor: theme.drawerText,
             title: Text(
               FlutterI18n.translate(context, "drawer.like"),
             ),
@@ -61,16 +54,14 @@ class PromoDrawer extends StatelessWidget {
             onTap: likeApp,
           ),
           ListTile(
-            textColor:
-                Theme.of(context).extension<CalculatorTheme>()!.drawerText,
+            textColor: theme.drawerText,
             title: Text(FlutterI18n.translate(context, "drawer.more_apps")),
             leading: const Icon(Icons.apps),
             onTap: () => openUrl(
                 "https://play.google.com/store/apps/developer?id=Senior+Laguna"),
           ),
           ListTile(
-            textColor:
-                Theme.of(context).extension<CalculatorTheme>()!.drawerText,
+            textColor: theme.drawerText,
             title: Text(FlutterI18n.translate(context, "drawer.get_premium")),
             leading: const Icon(Icons.workspace_premium),
             onTap: () => openUrl(
@@ -85,37 +76,32 @@ class PromoDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
-            textColor:
-                Theme.of(context).extension<CalculatorTheme>()!.drawerText,
+            textColor: theme.drawerText,
             title: Text(FlutterI18n.translate(context, "drawer.contact")),
             leading: const Icon(Icons.person),
             onTap: () =>
                 openUrl(FlutterI18n.translate(context, "drawer.url.contact")),
           ),
           ListTile(
-            textColor:
-                Theme.of(context).extension<CalculatorTheme>()!.drawerText,
+            textColor: theme.drawerText,
             title: Text(FlutterI18n.translate(context, "drawer.terms")),
             leading: const Icon(Icons.casino),
             onTap: () =>
                 openUrl(FlutterI18n.translate(context, "drawer.url.terms")),
           ),
           ListTile(
-            textColor:
-                Theme.of(context).extension<CalculatorTheme>()!.drawerText,
+            textColor: theme.drawerText,
             title: Text(FlutterI18n.translate(context, "drawer.privacy")),
             leading: const Icon(Icons.lock),
             onTap: () =>
                 openUrl(FlutterI18n.translate(context, "drawer.url.privacy")),
           ),
           ListTile(
-            textColor:
-                Theme.of(context).extension<CalculatorTheme>()!.drawerText,
+            textColor: theme.drawerText,
             title: Text(FlutterI18n.translate(context, "drawer.about")),
             leading: const Icon(Icons.people),
-            onTap: () {
-              showAboutDialog(context: context, applicationVersion: "1.1.0");
-            },
+            onTap: () =>
+                showAboutDialog(context: context, applicationVersion: "1.1.0"),
           ),
         ],
       ),
@@ -145,6 +131,8 @@ class SettingsDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    CalculatorTheme theme = Theme.of(context).extension<CalculatorTheme>()!;
+
     return Drawer(
       child:
           BlocBuilder<SettingsCubit, SettingsState>(builder: (context, state) {
@@ -159,16 +147,13 @@ class SettingsDrawer extends StatelessWidget {
                 children: [
                   Text(
                     FlutterI18n.translate(context, "drawer.settings"),
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 24,
                     ),
                   ),
                   Text(
                     FlutterI18n.translate(context, "drawer.settings_subtitle"),
-                    style: TextStyle(
-                        color: Theme.of(context)
-                            .extension<CalculatorTheme>()!
-                            .resultText),
+                    style: TextStyle(color: theme.resultText),
                   ),
                 ],
               ),
@@ -181,53 +166,39 @@ class SettingsDrawer extends StatelessWidget {
             SwitchListTile(
                 title: Text(
                   FlutterI18n.translate(context, "drawer.light_theme"),
-                  style: TextStyle(
-                      color: Theme.of(context)
-                          .extension<CalculatorTheme>()!
-                          .drawerText),
+                  style: TextStyle(color: theme.drawerText),
                 ),
                 value: state.lightTheme,
                 onChanged: (v) {
                   SettingsCubit.of(context).set(lightTheme: v);
                 }),
             ListTile(
-              textColor:
-                  Theme.of(context).extension<CalculatorTheme>()!.drawerText,
+              textColor: theme.drawerText,
               title: Text(
                   FlutterI18n.translate(context, "drawer.display_font_size")),
               onTap: () {
                 Navigator.pop(context);
                 showDialog(
                     context: context,
-                    builder: (context) => DisplayFontSizePopup());
+                    builder: (context) => const DisplayFontSizePopup());
               },
             ),
             ListTile(
-              textColor:
-                  Theme.of(context).extension<CalculatorTheme>()!.drawerText,
+              textColor: theme.drawerText,
               title: Text(
                   FlutterI18n.translate(context, "drawer.keyboard_font_size")),
               onTap: () {
                 Navigator.pop(context);
                 showDialog(
                     context: context,
-                    builder: (context) => KeyboardFontSizePopup());
+                    builder: (context) => const KeyboardFontSizePopup());
               },
             ),
             SwitchListTile(
                 title: Text(FlutterI18n.translate(context, "drawer.fullscreen"),
-                    style: TextStyle(
-                        color: Theme.of(context)
-                            .extension<CalculatorTheme>()!
-                            .drawerText)),
+                    style: TextStyle(color: theme.drawerText)),
                 value: state.fullscreen,
-                onChanged: (v) {
-                  state.fullscreen
-                      ? FullScreen.exitFullScreen()
-                      : FullScreen.enterFullScreen(
-                          FullScreenMode.EMERSIVE_STICKY);
-                  SettingsCubit.of(context).set(fullscreen: !state.fullscreen);
-                }),
+                onChanged: (_) => _onFullscreenSettingsChange(context)),
             const Divider(
               height: 1,
               endIndent: 64,
@@ -235,28 +206,33 @@ class SettingsDrawer extends StatelessWidget {
             ),
             SwitchListTile(
                 title: Text(
-                    FlutterI18n.translate(context, "drawer.scientific_mode"),
-                    style: TextStyle(
-                        color: Theme.of(context)
-                            .extension<CalculatorTheme>()!
-                            .drawerText)),
+                  FlutterI18n.translate(context, "drawer.scientific_mode"),
+                  style: TextStyle(
+                    color: theme.drawerText,
+                  ),
+                ),
                 value: state.scientificModeEnabled,
-                onChanged: (v) {
-                  SettingsCubit.of(context).set(scientificModeEnabled: v);
-                }),
+                onChanged: (v) =>
+                    SettingsCubit.of(context).set(scientificModeEnabled: v)),
             SwitchListTile(
                 title: Text(FlutterI18n.translate(context, "drawer.history"),
-                    style: TextStyle(
-                        color: Theme.of(context)
-                            .extension<CalculatorTheme>()!
-                            .drawerText)),
+                    style: TextStyle(color: theme.drawerText)),
                 value: state.historyEnabled,
-                onChanged: (v) {
-                  SettingsCubit.of(context).set(historyEnabled: v);
-                }),
+                onChanged: (v) =>
+                    SettingsCubit.of(context).set(historyEnabled: v)),
           ],
         );
       }),
     );
+  }
+
+  void _onFullscreenSettingsChange(BuildContext context) {
+    if (SettingsCubit.of(context).state.fullscreen) {
+      FullScreen.exitFullScreen();
+      SettingsCubit.of(context).set(fullscreen: false);
+    } else {
+      FullScreen.enterFullScreen(FullScreenMode.EMERSIVE_STICKY);
+      SettingsCubit.of(context).set(fullscreen: true);
+    }
   }
 }
